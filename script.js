@@ -45,3 +45,11 @@ gridSizeForm.addEventListener("submit", (e) => {
     if (!gridSize) return;
     setGrid(gridSize);
 });
+
+gridContainer.addEventListener("mouseover", (e) => {
+    if (e.target.classList.contains("pixel")) {
+        console.log(e.target);
+        e.target.style.backgroundColor = "red";
+        setTimeout(() => (e.target.style.backgroundColor = "aqua"), 150);
+    }
+});
