@@ -38,8 +38,9 @@ input:invalid {
     flex: 1 1 0;
 }
 
-.grid-row input {
+.pixel {
     margin: 0px;
     padding: 0px;
+    background-color: aqua;
     flex: 1 1 0;
 }
