@@ -40,5 +40,8 @@ function setGrid(gridSize) {
 
 gridSizeForm.addEventListener("submit", (e) => {
     e.preventDefault();
-    setGrid(getGridSize());
+
+    let gridSize = getGridSize();
+    if (!gridSize) return;
+    setGrid(gridSize);
 });
