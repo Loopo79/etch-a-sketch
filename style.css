@@ -24,3 +24,22 @@ body {
 input:invalid {
     border: 2px solid red;
 }
+
+#grid-container {
+    height: 640px;
+    width: 640px;
+    border: 2px solid black;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.grid-row {
+    display: flex;
+    flex: 1 1 0;
+}
+
+.grid-row input {
+    margin: 0px;
+    padding: 0px;
+    flex: 1 1 0;
+}
