@@ -9,12 +9,32 @@ function clearGrid() {
     }
 }
 
-gridSizeInput.addEventListener("keyup", (e) => {
+function createGridRow(rowSize) {
+    const row = document.createElement("div");
+    row.classList.add("grid-row");
+    for (let i = 0; i < rowSize; i++) {
+        let checkBox = document.createElement("input");
+        checkBox.type = "checkbox";
+
+        row.appendChild(checkBox);
+    }
+    return row;
+}
+
+function setGrid(gridSize) {
+    clearGrid();
+    for (let i = 0; i < gridSize; i++) {
+        gridContainer.appendChild(createGridRow(gridSize));
+    }
+}
+
+gridSizeForm.addEventListener("submit", (e) => {
+    e.preventDefault();
     let gridSize = Number(gridSizeInput.value);
 
     if (gridSize < 1 || 100 < gridSize || isNaN(gridSize)) {
         alert("Size of the grid should be between 1 and 100");
         return;
     }
-    // setGrid(gridSize);
+    setGrid(gridSize);
 });
