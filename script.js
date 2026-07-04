@@ -23,10 +23,10 @@ function createGridRow(rowSize) {
     const row = document.createElement("div");
     row.classList.add("grid-row");
     for (let i = 0; i < rowSize; i++) {
-        let checkBox = document.createElement("input");
-        checkBox.type = "checkbox";
+        let pixel = document.createElement("div");
+        pixel.classList.add("pixel");
 
-        row.appendChild(checkBox);
+        row.appendChild(pixel);
     }
     return row;
 }
